@@ -1,0 +1,57 @@
+.movie-trailer-avatar-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.movie-trailer-avatar-button:hover .movie-title {
+  color: #dd3444;
+  border-color: #fff !important;
+}
+
+.cooming-soon-avatars {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  border: 0;
+  padding: 40px !important;
+  background-color: "#212529" !important;
+  margin: "-2px 0 0 0 ";
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.avatar-border {
+  border: 3px solid #dd3444;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+}
+
+.vision-date {
+  position: absolute;
+  min-width: 84px;
+  padding: 3px 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dd3444;
+  font-size: 15px;
+  border-radius: 15px;
+  bottom: -6px;
+  color: #fff;
+}
+
+.movie-title {
+  color: #fff;
+}
+
+.movie-trailer-avatars{
+  width: 150px;
+}

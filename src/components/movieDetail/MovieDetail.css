@@ -1,0 +1,183 @@
+.asdasds {
+  height: 2000px;
+  padding: 30px;
+}
+.movie-name {
+  background-color: #212529;
+  padding: 0px 20px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+
+.movie-media {
+  display: flex;
+  flex-direction: column;
+  background-color: #131619;
+  color: #fff;
+}
+
+.movies-options-media {
+  background-color: #212529;
+  margin: -5px 0 0 0;
+  display: flex;
+}
+
+.movies-options-media-item {
+  gap: 10px;
+  margin: 10px;
+  display: flex;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #747474;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.media-player {
+  position: relative;
+  margin: 10px 0;
+  height: 40vw;
+}
+
+.media-player-poster-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.play-btn-media-player {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0000008c;
+  border: 0;
+  font-size: 100px;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0 25px;
+  display: flex;
+  cursor: pointer;
+}
+
+.img-fluid-media-player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s linear;
+}
+
+.media-player-poster-path:hover .img-fluid-media-player {
+  scale: 1.2;
+  filter: brightness(0.7);
+}
+
+.media-player-movie-title {
+  z-index: 999999;
+  position: absolute;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #0000007b;
+}
+
+.movie-detail-info {
+  margin: 40px 0;
+  color: #fff;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.movie-info-name {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
+  padding: 10px 20px;
+  border-radius: 5px;
+  justify-content: center;
+  width: fit-content;
+  background-color: #212529;
+}
+
+.movie-info-detail {
+  margin-top: -5px;
+  padding: 15px;
+}
+
+.movie-info-detail-items {
+  padding-left: 20px;
+}
+
+.movie-overview {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: justify;
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  opacity: 0.25;
+}
+
+.movie-info-badge {
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 2px 8px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #555555;
+  margin: 4px;
+  color: #fff;
+}
+
+.movie-info-detail-item {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: rgb(158, 158, 158);
+}
+
+.actors-avatars {
+  margin-top: 20px;
+  /* font-size: 0.8rem; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80%;
+}
+
+.actors-avatar-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #3b4348;
+  border-radius: 32px;
+  padding-right: 10px;
+}
+
+.simalar-movie-info-detail {
+  padding: 20px;
+  background-color: #212529;
+  margin-top: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}

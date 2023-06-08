@@ -1,0 +1,132 @@
+.carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 430px;
+}
+.carousel-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.carousel-info {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.carouser-Desc {
+  z-index: 100;
+  color: white;
+  padding: 40px 40px 10px 40px;
+  text-align: center;
+  max-height: 48%;
+  overflow: hidden;
+}
+
+.carousel-item:hover .carousel-info {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.692);
+  display: block !important;
+}
+
+.carousel-image {
+  position: relative;
+  height: 400px;
+  color: #fff;
+  -webkit-box-shadow: inset 0px -60px 105px 24px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -60px 105px 24px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -60px 105px 24px rgba(0, 0, 0, 1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-movie-bottom-item {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  z-index: 111;
+  width: 100%;
+}
+
+.carousel-badges {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.carousel-badge-item {
+  border-radius: 5px;
+  background-color: rgb(134, 134, 134);
+  padding: 0 10px;
+  margin: 5px;
+  color: black;
+}
+
+.carousel-movie-item {
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imdb {
+  display: flex;
+  align-items: center;
+  color: orange;
+}
+
+.btn-carousel {
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.664);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 101;
+}
+
+.btn-right {
+  right: 20px;
+}
+
+.btn-left {
+  left: 20px;
+}
+
+.carousel-movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  overflow: hidden;
+  /* padding-left: 30px; */
+  text-align: center;
+}
+
+.react-multiple-carousel__arrow {
+  z-index: 998;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background-color: #dd3444;
+}

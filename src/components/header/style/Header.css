@@ -1,0 +1,42 @@
+.title-icon {
+  width: 30px;
+}
+
+.title-text {
+  margin: auto 10px;
+}
+.header-icon-title {
+  display: flex;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pages {
+  display: flex;
+  margin: auto 0;
+}
+.pages-item {
+  margin: auto 0;
+}
+
+.input-control {
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+.input-control:focus {
+  border: 1px solid #1976d2;
+}
+
+.header-border {
+  border-bottom: 3px solid rgb(206, 206, 206);
+}
+
+.css-8hz728-MuiPaper-root-MuiAppBar-root{
+  position: static !important;
+}

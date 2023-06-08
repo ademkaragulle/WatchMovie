@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieList from '../MovieList/MovieList'
+import MovieList from '../movieList/MovieList'
 
 function Movies() {
     return (

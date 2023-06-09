@@ -80,6 +80,8 @@ function MovieDetail({ movieID }) {
                                     )
                                 })
                             }
+
+                            
                         </div>
                     </div>
                     <div className='media-player'>

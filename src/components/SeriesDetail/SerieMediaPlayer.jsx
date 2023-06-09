@@ -28,9 +28,9 @@ function SerieMediaPlayer({ serieID, movieData, currentOption, setClosePosterPat
 
 
     return (
-        <>
+        <div className='serie-media-item'>
             <div onClick={handleClosePosterPath} style={{ display: `${closePosterPath ? 'none' : 'block'}` }} className='media-player-poster-path'>
-                <div className='media-player-movie-title'>{movieData.name} / <span style={{ color: 'red' }}>Series Video - {currentOption + 1}</span></div>
+                <div className='media-player-serie-title'>{movieData.name} / <span style={{ color: 'red' }}>Series Video - {currentOption + 1}</span></div>
                 {
                     !movieData.backdrop_path ? <Skeleton height={800} /> : <img className='img-fluid-media-player' src={`https://image.tmdb.org/t/p/original${movieData.backdrop_path}`} alt="" />
                 }
@@ -39,7 +39,7 @@ function SerieMediaPlayer({ serieID, movieData, currentOption, setClosePosterPat
             {
                 closePosterPath && getVideo ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${getVideo.key}?autoplay=1`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> : <div className={closePosterPath ? 'video-not-found' : null} style={{ display: 'none' }}>something is wrong</div>
             }
-        </>
+        </div>
     )
 }
 

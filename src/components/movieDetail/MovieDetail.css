@@ -1,5 +1,17 @@
-.asdasds {
-  height: 2000px;
+@media screen and (max-width: 768px) {
+  .movie-media-item {
+    width: 100vw !important;
+    height: 50vw !important;
+  }
+  .media-player {
+    padding: 0 !important;
+  }
+  .movies-options-media-item {
+    font-size: 0.6rem ;
+  }
+}
+
+.movies-detail-container {
   padding: 30px;
 }
 .movie-name {
@@ -21,16 +33,17 @@
 }
 
 .movies-options-media {
+  padding: 10px 0;
   background-color: #212529;
   margin: -5px 0 0 0;
   display: flex;
+  border-bottom: 1px solid #fff;
 }
 
 .movies-options-media-item {
   gap: 10px;
   margin: 10px;
   display: flex;
-  padding: 0px 20px;
   justify-content: center;
   align-items: center;
   background-color: transparent;
@@ -41,9 +54,17 @@
 }
 
 .media-player {
+  background-color: #212529;
   position: relative;
-  margin: 10px 0;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-media-item {
+  width: 70vw;
   height: 40vw;
+  position: relative;
 }
 
 .media-player-poster-path {

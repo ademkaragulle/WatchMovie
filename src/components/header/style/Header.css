@@ -1,3 +1,42 @@
+@media screen and (max-width: 768px) {
+  .pages-item {
+    display: none;
+  }
+  .drop-down-menu {
+    display: block !important;
+  }
+}
+
+.asdf {
+  position: fixed;
+  z-index: 99999999;
+  right: 0;
+  background-color: #131619;
+  width: 70vw;
+  height: 100vh;
+  color: #fff;
+  padding: 20px;
+}
+
+.drop-down-menu-header {
+  display: flex;
+  font-size: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(221, 52, 68);
+}
+
+.drop-down-menu-items {
+  padding: 20px 0;
+}
+
+.drop-down-genres {
+  font-size: 20px;
+}
+
+.drop-down-menu {
+  display: none;
+}
+
 .title-icon {
   width: 30px;
 }
@@ -37,6 +76,10 @@
   border-bottom: 3px solid rgb(206, 206, 206);
 }
 
-.css-8hz728-MuiPaper-root-MuiAppBar-root{
+.css-8hz728-MuiPaper-root-MuiAppBar-root {
   position: static !important;
+}
+
+header {
+  position: unset;
 }

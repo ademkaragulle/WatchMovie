@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Container, AppBar, Toolbar, Typography, Menu, MenuItem, Button, Fade } from '@mui/material'
-import { MdKeyboardArrowDown } from 'react-icons/md'
+import { Container, AppBar, Toolbar, Typography, Button } from '@mui/material'
+import { HiMenuAlt3 } from 'react-icons/hi'
 import './style/Header.css'
 import { Link } from 'react-router-dom'
 
@@ -8,21 +8,21 @@ const pages = ['Movies', 'Series']
 const movieYears = ['2023', '2022', '2021', '2020', '2019', '2018']
 
 
-function Header() {
+function Header({ setIsTrueDropDownMenu }) {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
     };
+
     return (
         <div id='header' className='header-border'>
-            <AppBar sx={{
-                background: '#212529'
-            }}>
-                <Container>
+            <AppBar sx={{ background: '#212529', height: '5rem', position: 'static', display: 'flex', justifyContent: 'center' }}>
+                <Container sx={{ maxWidth: 'none !important' }}>
                     <Toolbar className='header'>
                         <Link to="/">
                             <Typography
@@ -63,39 +63,11 @@ function Header() {
                                         </Link>
                                     )
                                 })}
-                                <Button
-                                    id="fade-button"
-                                    aria-controls={open ? 'fade-menu' : undefined}
-                                    aria-haspopup="true"
-                                    aria-expanded={open ? 'true' : undefined}
-                                    onClick={handleClick}
-                                    sx={{ color: '#fff', fontSize: '12px' }}
-                                >
-                                    Movie Years
-                                    <MdKeyboardArrowDown style={{ fontSize: '24px' }} />
-                                </Button>
-                                <Menu
-                                    id="fade-menu"
-                                    MenuListProps={{
-                                        'aria-labelledby': 'fade-button',
-                                    }}
-                                    anchorEl={anchorEl}
-                                    open={open}
-                                    onClose={handleClose}
-                                    TransitionComponent={Fade}
-                                >
-                                    {
-                                        movieYears.map((movie) => {
-                                            return (
-                                                <Link key={movie} to={`movie-year-${movie}`} style={{ color: '#393939' }}>
-                                                    <MenuItem onClick={handleClose}>{movie}</MenuItem>
-                                                </Link>
-                                            )
-                                        })
-                                    }
-                                </Menu>
+                                <input className='input-control' type="search" placeholder='Search Movie' />
                             </div>
-                            <input className='input-control' type="search" placeholder='Search Movie' />
+                            <div onClick={() => setIsTrueDropDownMenu(true)} className='drop-down-menu'>
+                                <HiMenuAlt3 fontSize={'28px'} />
+                            </div>
                         </Typography>
                     </Toolbar>
                 </Container>

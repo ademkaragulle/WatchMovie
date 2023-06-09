@@ -33,7 +33,6 @@ function MoviesComingSoon() {
                         <AiFillYoutube style={{ color: 'red', fontSize: '20px' }} />
                         Coming Soon
                     </Grid>
-                    <Grid item textAlign={'right'} sx={{ margin: 'auto 0' }} xs={12} md={1}>All Trailer</Grid>
                 </Grid>
                 <Grid className='border-top' container>
                     <Grid item className='cooming-soon-avatars' padding='0 30px' sx={{ background: '#212529', margin: '-2px 0 0 0 ', border: 0 }} md={12}>
@@ -43,7 +42,7 @@ function MoviesComingSoon() {
                             <div className='cooming-soon-avatars'>
                                 {
                                     data.map((item, index) => {
-                                        if (index < 6) {
+                                        if (index < 9) {
                                             return (
                                                 <MoviesComingSoonItem key={item.id} movie={item} />
                                             )

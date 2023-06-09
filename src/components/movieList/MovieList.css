@@ -7,7 +7,7 @@
 .movie-list {
   justify-content: center;
   align-items: center;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem !important;
   background-color: #212529;
   display: flex;
   flex-wrap: wrap;

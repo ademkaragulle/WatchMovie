@@ -2,6 +2,7 @@ import { Skeleton } from '@mui/material';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { BsFillPlayFill } from 'react-icons/bs'
+import './MovieDetail.css'
 
 function MovieMediaPlayer({ movieID, movieData, currentOption, setClosePosterPath, closePosterPath }) {
     const [getVideo, setgetVideo] = useState([])
@@ -28,7 +29,7 @@ function MovieMediaPlayer({ movieID, movieData, currentOption, setClosePosterPat
 
 
     return (
-        <>
+        <div className='movie-media-item'>
             <div onClick={handleClosePosterPath} style={{ display: `${closePosterPath ? 'none' : 'block'}` }} className='media-player-poster-path'>
                 <div className='media-player-movie-title'>{movieData.title} / <span style={{ color: 'red' }}>Movie Video - {currentOption + 1}</span></div>
                 {
@@ -39,7 +40,7 @@ function MovieMediaPlayer({ movieID, movieData, currentOption, setClosePosterPat
             {
                 closePosterPath && getVideo ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${getVideo.key}?autoplay=1`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> : <div className={closePosterPath ? 'video-not-found' : null} style={{ display: 'none' }}>something is wrong</div>
             }
-        </>
+        </div>
     )
 }
 

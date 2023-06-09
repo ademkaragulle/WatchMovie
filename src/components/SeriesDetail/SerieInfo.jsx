@@ -28,44 +28,44 @@ function SerieInfo({ movieData }) {
 
     return (
         <Box>
-            <div className='movie-info-name'>
+            <div className='serie-info-name'>
                 <BsFillInfoCircleFill />
                 <span>Information About <span style={{ color: '#dd3444' }}>{movieData.name}</span></span>
             </div>
-            <Grid className='movie-info-detail' container sx={{ backgroundColor: '#212529' }}>
+            <Grid className='serie-info-detail' container sx={{ backgroundColor: '#212529' }}>
                 <Grid item xs={12} md={4}>
                     <img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="" />
                 </Grid>
-                <Grid className='movie-info-detail-items' item xs={12} md={8}>
-                    <div className='movie-overview'>{movieData.overview}</div>
+                <Grid className='serie-info-detail-items' item xs={12} md={8}>
+                    <div className='serie-overview'>{movieData.overview}</div>
                     <hr />
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         <AiFillStar style={{ color: '#ffc107' }} />
                         <span style={{ color: '#ffc107', fontWeight: 'bold' }}>IMDb: </span><span style={{ color: "#fff" }}>{movieData.vote_average.toFixed(1)}</span><span>/10</span>
                     </div>
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         Episode Run Time:
-                        <div className='movie-info-badge'>{movieData.episode_run_time[0]} minutes</div>
+                        <div className='serie-info-badge'>{movieData.episode_run_time[0]} minutes</div>
                     </div>
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         Seasons:
-                        <div className='movie-info-badge'>{movieData.last_episode_to_air.season_number} Season</div>
+                        <div className='serie-info-badge'>{movieData.last_episode_to_air.season_number} Season</div>
                     </div>
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         Country:
-                        <div className='movie-info-badge'>{movieData.origin_country[0] ? movieData.origin_country[0] : '-'}</div>
+                        <div className='serie-info-badge'>{movieData.origin_country[0] ? movieData.origin_country[0] : '-'}</div>
                     </div>
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         First Air Date:
-                        <div className='movie-info-badge'>{movieData.first_air_date}</div>
+                        <div className='serie-info-badge'>{movieData.first_air_date}</div>
                     </div>
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         Genre:
                         {
-                            movieData.genres.map((item) => <div key={item.id} className='movie-info-badge'>{item.name}</div>)
+                            movieData.genres.map((item) => <div key={item.id} className='serie-info-badge'>{item.name}</div>)
                         }
                     </div>
-                    <div className='movie-info-detail-item'>
+                    <div className='serie-info-detail-item'>
                         <div>actor and actress:</div>
                         {
                             <div className='actors-avatars'>

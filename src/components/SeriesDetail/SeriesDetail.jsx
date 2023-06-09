@@ -56,24 +56,24 @@ function SeriesDetail({ serieID }) {
     return (
         <>
             {!data ? <Skeleton height={1000} /> :
-                <div className='asdasds'>
-                    <div className='movie-media'>
+                <div className='series-detail-container'>
+                    <div className='serie-media'>
                         <div>
-                            <div className='movie-name'>
+                            <div className='serie-name'>
                                 <AiFillYoutube color='#dd3444' />
                                 <p>{data.name}</p>
                             </div>
                         </div>
-                        <div className='movies-options-media'>
+                        <div className='series-options-media'>
                             {
                                 amountOfMovieVideos < 2 ?
-                                    <button className='movies-options-media-item' onClick={() => getActiveClass(0)}>
+                                    <button className='series-options-media-item' onClick={() => getActiveClass(0)}>
                                         <MdOutlineOndemandVideo />
                                         <p>Serie Video 1</p>
                                     </button>
                                     : MovieOptions.map((item, index) => {
                                         return (
-                                            <button className='movies-options-media-item' onClick={() => getActiveClass(index)} key={index} >
+                                            <button className='series-options-media-item' onClick={() => getActiveClass(index)} key={index} >
                                                 <MdOutlineOndemandVideo />
                                                 <p>{item}</p>
                                             </button>
@@ -85,10 +85,10 @@ function SeriesDetail({ serieID }) {
                     <div className='media-player'>
                         <SerieMediaPlayer serieID={setserieID} movieData={data} currentOption={currentOption} setClosePosterPath={setClosePosterPath} closePosterPath={closePosterPath} />
                     </div>
-                    <div className='movie-detail-info'>
+                    <div className='serie-detail-info'>
                         <MovieInfo movieData={data} />
                     </div>
-                    <div className='movie-comment'>
+                    <div className='serie-comment'>
                         <SerieComments movieData={data} />
                     </div>
                 </div>}

@@ -12,8 +12,11 @@ import { useSelector } from 'react-redux'
 import MovieDetail from './components/movieDetail/MovieDetail'
 import { useEffect, useState } from 'react'
 import SeriesDetail from './components/SeriesDetail/SeriesDetail'
+import DropDownMenu from './components/header/DropDownMenu'
 
 function App() {
+  const [isTrueDropDownMenu, setIsTrueDropDownMenu] = useState(false)
+
   const { manageOverlay, movieID } = useSelector((store) => {
     return {
       manageOverlay: store.manageOverlay.manageOverlay,
@@ -39,7 +42,14 @@ function App() {
     <>
       {manageOverlay ? <Overlay /> : null}
       <div className='App'>
-        <Header />
+        {
+          isTrueDropDownMenu ?
+            <>
+              <div onClick={() => setIsTrueDropDownMenu(false)} className='drop-down-menu-overlay'></div>
+              <DropDownMenu setIsTrueDropDownMenu={setIsTrueDropDownMenu}/>
+            </> : null
+        }
+        <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
         <Routes>
           <Route path='/' element={
             <>

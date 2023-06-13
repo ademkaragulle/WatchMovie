@@ -28,6 +28,12 @@
   scrollbar-width: none;
 }
 
+@media screen and (max-width: 768px) {
+  .cooming-soon-avatars {
+    padding: 8px 0 8px 0 !important;
+  }
+}
+
 .avatar-border {
   border: 3px solid #dd3444;
   border-radius: 50%;
@@ -52,6 +58,6 @@
   color: #fff;
 }
 
-.movie-trailer-avatars{
+.movie-trailer-avatars {
   width: 150px;
 }

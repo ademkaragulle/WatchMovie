@@ -34,7 +34,7 @@ function SerieInfo({ movieData }) {
             </div>
             <Grid className='serie-info-detail' container sx={{ backgroundColor: '#212529' }}>
                 <Grid item xs={12} md={4}>
-                    <img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="" />
+                    <img className='serie-img-fluid' src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="" />
                 </Grid>
                 <Grid className='serie-info-detail-items' item xs={12} md={8}>
                     <div className='serie-overview'>{movieData.overview}</div>

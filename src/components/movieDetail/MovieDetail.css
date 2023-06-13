@@ -7,13 +7,30 @@
     padding: 0 !important;
   }
   .movies-options-media-item {
-    font-size: 0.6rem ;
+    font-size: 0.7rem;
+  }
+  .movie-info-detail-items {
+    padding-left: 0 !important;
+  }
+  .similar-movie-item {
+    width: 40vw !important;
+  }
+  .movies-detail-container {
+    padding: 20px 10px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .movie-img-fluid {
+    width: 40% !important;
   }
 }
 
 .movies-detail-container {
-  padding: 30px;
+  padding: 20px;
 }
+
+
 .movie-name {
   background-color: #212529;
   padding: 0px 20px;
@@ -75,21 +92,6 @@
   cursor: pointer;
 }
 
-.play-btn-media-player {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #0000008c;
-  border: 0;
-  font-size: 100px;
-  color: #fff;
-  border-radius: 8px;
-  padding: 0 25px;
-  display: flex;
-  cursor: pointer;
-}
-
 .img-fluid-media-player {
   position: absolute;
   width: 100%;
@@ -116,7 +118,7 @@
   color: #fff;
 }
 
-.img-fluid {
+.movie-img-fluid {
   width: 100%;
 }
 
@@ -201,4 +203,26 @@ hr {
   gap: 10px;
   justify-content: center;
   align-items: center;
+}
+
+.similar-movie-item {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  width: 210px;
+}
+
+.similar-movie-item:hover .similar-movie-info {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.692);
+  display: block !important;
+}
+
+.similar-movie-info {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  color: #fff;
+  height: 100%;
+  width: 100%;
 }

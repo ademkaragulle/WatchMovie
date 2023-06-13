@@ -13,6 +13,7 @@ import MovieDetail from './components/movieDetail/MovieDetail'
 import { useEffect, useState } from 'react'
 import SeriesDetail from './components/SeriesDetail/SeriesDetail'
 import DropDownMenu from './components/header/DropDownMenu'
+import Footer from './components/footer/Footer'
 
 function App() {
   const [isTrueDropDownMenu, setIsTrueDropDownMenu] = useState(false)
@@ -25,15 +26,12 @@ function App() {
   })
   const [determineGenre, setDetermineGenre] = useState('')
   const locationPathName = useLocation().pathname
-
   useEffect(() => {
     const determineMovieOrSerie = locationPathName.split('-')
     if (determineMovieOrSerie[0] + '-' + determineMovieOrSerie[1] === '/movie-detail') {
       setDetermineGenre(<MovieDetail movieID={locationPathName} />)
     } else if (determineMovieOrSerie[0] + '-' + determineMovieOrSerie[1] === '/serie-detail') {
       setDetermineGenre(<SeriesDetail serieID={locationPathName} />)
-    } else {
-      setDetermineGenre(<WrongURL />)
     }
   }, [locationPathName])
 
@@ -47,7 +45,7 @@ function App() {
             <>
               <div onClick={() => setIsTrueDropDownMenu(false)} className='drop-down-menu-overlay'></div>
               <DropDownMenu setIsTrueDropDownMenu={setIsTrueDropDownMenu}/>
-            </> : null
+            </> : ''
         }
         <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
         <Routes>
@@ -63,6 +61,7 @@ function App() {
           <Route path={`${locationPathName.substring(1, locationPathName.length)}`} element={determineGenre} />
           <Route path='*' element={<WrongURL />} />
         </Routes>
+        <Footer/>
       </div>
     </>
   )

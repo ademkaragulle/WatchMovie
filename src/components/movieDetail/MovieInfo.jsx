@@ -35,7 +35,7 @@ function MovieInfo({ movieData }) {
             </div>
             <Grid className='movie-info-detail' container sx={{ backgroundColor: '#212529' }}>
                 <Grid item xs={12} md={4}>
-                    <img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="" />
+                    <img className='movie-img-fluid' src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="" />
                 </Grid>
                 <Grid className='movie-info-detail-items' item xs={12} md={8}>
                     <div className='movie-overview'>{movieData.overview}</div>

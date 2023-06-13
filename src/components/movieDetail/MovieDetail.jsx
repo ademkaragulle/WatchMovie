@@ -56,7 +56,7 @@ function MovieDetail({ movieID }) {
     return (
         <>
             {!data ? <Skeleton height={1000} /> :
-                <div className='asdasds'>
+                <div className='movies-detail-container'>
                     <div className='movie-media'>
                         <div>
                             <div className='movie-name'>
@@ -93,9 +93,9 @@ function MovieDetail({ movieID }) {
                     <div className='movie-detail-info'>
                         <SimilarMovie movieData={data} setClosePosterPath={setClosePosterPath} />
                     </div>
-                    <div className='movie-comment'>
+                    {/* <div className='movie-comment'>
                         <MovieComments movieData={data} />
-                    </div>
+                    </div> */}
                 </div>}
         </>
     )

@@ -24,18 +24,23 @@ function SeriesList({ genre }) {
             error: store.series.error,
         }
     })
+    
+
+
+
+
     return (
         <div>
             <h1 id='movies' className='banner-movies'>{String(genre).toUpperCase()}</h1>
-            <div className='movie-lists'>
+            <div className='serie-lists'>
                 {loading && <Skeleton variant="rectangular" width="100%" height={2000} sx={{ bgcolor: 'grey.900' }} />}
                 {!loading && error ? <div>Error: {error}</div> : null}
-                {!loading && data ? <div className='movie-list'>
+                {!loading && data ? <div className='serie-list'>
                     {
                         data.map((item, index) => {
                             return (
                                 <Link key={index} to={`/serie-detail-${item.id}`}>
-                                    <div className='movie-list-item'>
+                                    <div className='serie-list-item'>
                                         <SeriesListItem serieItem={item} />
                                     </div>
                                 </Link>

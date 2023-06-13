@@ -27,11 +27,11 @@ function SeriesDetail({ serieID }) {
 
     const getSerieDetail = async () => {
         const response = await axios.get(`https://api.themoviedb.org/3/tv/${setserieID}?language=en-US?`, options);
-        setData(response.data)
+        await setData(response.data)
     }
     const getSerieVideo = async () => {
         const response = await axios.get(`https://api.themoviedb.org/3/tv/${setserieID}/videos?language=en-US`, options);
-        setAmountOfMovieVideos(response.data.results.length)
+        await setAmountOfMovieVideos(response.data.results.length)
     }
 
     getSerieVideo()
@@ -43,6 +43,7 @@ function SeriesDetail({ serieID }) {
     }
 
     useEffect(() => {
+        getSerieVideo()
         getSerieDetail()
         moveScroll()
     }, [serieID])
@@ -88,9 +89,9 @@ function SeriesDetail({ serieID }) {
                     <div className='serie-detail-info'>
                         <MovieInfo movieData={data} />
                     </div>
-                    <div className='serie-comment'>
+                    {/* <div className='serie-comment'>
                         <SerieComments movieData={data} />
-                    </div>
+                    </div> */}
                 </div>}
         </>
     )

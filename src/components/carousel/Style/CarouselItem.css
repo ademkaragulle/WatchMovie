@@ -30,8 +30,12 @@
   color: white;
   padding: 40px 40px 10px 40px;
   text-align: center;
-  max-height: 48%;
-  overflow: hidden;
+  max-height: 39%;
+  overflow: scroll;
+}
+
+.carouser-Desc::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-item:hover .carousel-info {
@@ -66,8 +70,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px 0;
-  width: 100%;
+  margin: 20px 5%;
+  width: 90%;
 }
 
 .carousel-badge-item {

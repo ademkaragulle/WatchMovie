@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CarouselItemBadge from '../carousel/CarouselItemBadge'
 import { FaComment } from 'react-icons/fa'
 import { AiFillStar } from 'react-icons/ai'
@@ -98,7 +98,7 @@ function MovieListItem({ movieItem }) {
             })
         })
     }
-    findGenre(movieItem.genre_ids, genres)
+    movieItem.genre_ids ? findGenre(movieItem.genre_ids, genres) : null
 
 
     return (

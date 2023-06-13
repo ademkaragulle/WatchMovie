@@ -1,3 +1,41 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.pagination-item {
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination-item:hover {
+  filter: contrast(0.6);
+}
+
+.pagination-arrow {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .pagination-item {
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+  .pagination {
+    gap: 8px;
+  }
+}
+
 * {
   font-family: sans-serif;
 }
@@ -37,4 +75,23 @@ body {
   background-color: #8d8d8d59;
   width: 100vw;
   height: 100vh;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.footer-link{
+  color: #dd3444;
+}
+.footer-link:hover {
+  color: red;
 }

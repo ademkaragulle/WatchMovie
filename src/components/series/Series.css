@@ -1,10 +1,10 @@
-.movie-lists {
+.serie-lists {
   background: #131619;
   padding: 30px 30px !important;
   color: #fff;
 }
 
-.movie-list {
+.serie-list {
   justify-content: center;
   align-items: center;
   padding: 2rem 1.5rem;
@@ -15,45 +15,60 @@
 }
 
 @media screen and (max-width: 767px) {
-  .movie-list-item {
+  .serie-list-item {
     width: 100%;
   }
-  .movie-image {
-    height: 60vh !important;
+  .serie-image {
+    height: 30vh !important;
   }
-  .movie-list {
-    padding: 0;
+  .serie-list {
+    padding: 10px 0 !important;
+  }
+  .serie-item {
+    width: 40vw !important;
+  }
+  .series-serie-item {
+    padding: 10px 10px !important;
+  }
+  .series-serie-title {
+    padding: 0 10px;
+  }
+  .serie-badges {
+    display: none !important;
+  }
+  .serie-Desc {
+    padding: 20px 10px 10px 10px !important;
   }
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
-  .movie-list-item {
+  .serie-list-item {
     width: 48%;
   }
-  .movie-image {
+  .serie-image {
     height: 60vh !important;
   }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 991px) {
-  .movie-list-item {
+  .serie-list-item {
     width: 30%;
   }
 }
 @media screen and (min-width: 1199px) {
-  .movie-list-item {
+  .serie-list-item {
     width: 24%;
   }
 }
 
-.movie-item {
+.serie-item {
   position: relative;
   height: 100%;
   margin: 0 auto;
   width: 250px;
 }
 
-.movie-image {
+.serie-image {
   position: relative;
   height: 400px;
   color: #fff;
@@ -65,7 +80,7 @@
   background-size: cover;
 }
 
-.movie-info {
+.serie-info {
   z-index: 100;
   display: none;
   position: absolute;
@@ -74,22 +89,26 @@
   width: 100%;
 }
 
-.movie-item:hover .movie-info {
+.serie-item:hover .serie-info {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.692);
   display: block !important;
 }
 
-.movie-Desc {
+.serie-Desc {
   z-index: 100;
   color: white;
   padding: 40px 40px 10px 40px;
   text-align: center;
   height: 38%;
-  overflow: hidden;
+  overflow: scroll;
 }
 
-.movie-badges {
+.serie-Desc::-webkit-scrollbar {
+  display: none;
+}
+
+.serie-badges {
   position: absolute;
   bottom: 85px;
   display: flex;
@@ -99,7 +118,7 @@
   width: 100%;
 }
 
-.movie-movie-bottom-item {
+.serie-serie-bottom-item {
   color: #fff;
   position: absolute;
   bottom: 20px;
@@ -107,31 +126,19 @@
   width: 100%;
 }
 
-.movies-movie-item {
+.series-serie-item {
   padding: 10px 40px;
   display: flex;
   justify-content: space-between;
 }
 
-.imdb {
-  display: flex;
-  align-items: center;
-  color: orange;
-}
-
-.movies-movie-title {
+.series-serie-title {
   font-size: 1.2rem;
   font-weight: bold;
   overflow: hidden;
   padding: 0 30px;
   text-align: center;
   max-height: 45px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 .current-pagination-item {
@@ -144,17 +151,6 @@
   color: #fff;
 }
 
-.pagination-item {
-  font-size: 16px;
-  width: 50px;
-  height: 50px;
-  border: 0;
-  border-radius: 50%;
-  padding: 10px;
-  color: #fff;
-  cursor: pointer;
-}
-
 .current-page {
   background-color: #dd3444;
   pointer-events: none;
@@ -163,24 +159,4 @@
 .other-pages {
   background-color: #00000095;
   cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .pagination-item {
-    font-size: 12px;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-  }
-  .pagination {
-    gap: 8px;
-  }
-}
-
-.pagination-item:hover {
-  filter: contrast(0.6);
-}
-
-.pagination-arrow {
-  background-color: transparent;
 }

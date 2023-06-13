@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CarouselItemBadge from '../carousel/CarouselItemBadge'
 import { FaComment } from 'react-icons/fa'
 import { AiFillStar } from 'react-icons/ai'
@@ -77,7 +77,7 @@ const genres = [
 
 
 function SeriesListItem({ serieItem }) {
-
+    console.log()
     const findgenres = []
 
     const findGenre = (arr, genres) => {
@@ -89,17 +89,16 @@ function SeriesListItem({ serieItem }) {
             })
         })
     }
-    findGenre(serieItem.genre_ids, genres)
-
+    serieItem.genre_ids ? findGenre(serieItem.genre_ids, genres) : null
 
     return (
-        <div className='movie-item'>
-            <div className='movie-image' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500/${serieItem.poster_path})` }}>
-                <div className='movie-info'>
-                    <div className='movie-Desc'>
+        <div className='serie-item'>
+            <div className='serie-image' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500/${serieItem.poster_path})` }}>
+                <div className='serie-info'>
+                    <div className='serie-Desc'>
                         {serieItem.overview ? serieItem.overview : 'Not Found Description For This Series'}
                     </div>
-                    <div className='movie-badges'>
+                    <div className='serie-badges'>
                         {
                             !findgenres ? null :
                                 findgenres.map((item) => {
@@ -113,8 +112,8 @@ function SeriesListItem({ serieItem }) {
                     </div>
                 </div>
             </div>
-            <div className='movie-movie-bottom-item'>
-                <div className='movies-movie-item'>
+            <div className='serie-serie-bottom-item'>
+                <div className='series-serie-item'>
                     <div>
                         {String(serieItem.first_air_date).substring(0, 4)}
                     </div>
@@ -127,7 +126,7 @@ function SeriesListItem({ serieItem }) {
                         <span >{serieItem.vote_average}</span>
                     </div>
                 </div>
-                <div className='movies-movie-title'>
+                <div className='series-serie-title'>
                     {serieItem.name}
                 </div>
             </div>

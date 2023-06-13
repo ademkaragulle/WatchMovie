@@ -37,9 +37,9 @@ function SimilarMovie({ movieData, setClosePosterPath }) {
                     <span>More Like This Movie</span>
                 </div>
                 <div className='simalar-movie-info-detail' style={{ backgroundColor: '#212529' }}>
-                    {similarMovies ?
+                    {similarMovies.length ?
                         similarMovies.map((movie, index) => {
-                            if (index < 4) {
+                            if (index < 6) {
                                 return (
                                     <Link onClick={() => setClosePosterPath(false)} key={index} to={`/movie-detail-${movie.id}`}>
                                         <SimilarMovieItem movieItem={movie} />

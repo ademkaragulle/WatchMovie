@@ -101,9 +101,9 @@ function SimilarMovieItem({ movieItem }) {
 
 
     return (
-        <div className='movie-item'>
+        <div className='similar-movie-item'>
             <div className='movie-image' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movieItem.poster_path})` }}>
-                <div className='movie-info'>
+                <div className='similar-movie-info'>
                     <div className='movie-Desc'>
                         {movieItem.overview}
                     </div>

@@ -19,10 +19,25 @@
     width: 100%;
   }
   .movie-image {
-    height: 60vh !important;
+    height: 30vh !important;
   }
   .movie-list {
-    padding: 0;
+    padding: 10px 0 !important;
+  }
+  .movie-item {
+    width: 40vw !important;
+  }
+  .movies-movie-item {
+    padding: 10px 10px !important;
+  }
+  .movies-movie-title {
+    padding: 0 10px;
+  }
+  .movie-badges {
+    display: none !important;
+  }
+  .movie-Desc {
+    padding: 20px 10px 10px 10px !important;
   }
 }
 
@@ -86,8 +101,14 @@
   padding: 40px 40px 10px 40px;
   text-align: center;
   height: 38%;
-  overflow: hidden;
+  overflow: scroll;
 }
+
+
+.movie-Desc::-webkit-scrollbar {
+  display: none;
+}
+
 
 .movie-badges {
   position: absolute;
@@ -113,12 +134,6 @@
   justify-content: space-between;
 }
 
-.imdb {
-  display: flex;
-  align-items: center;
-  color: orange;
-}
-
 .movies-movie-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -126,12 +141,6 @@
   padding: 0 30px;
   text-align: center;
   max-height: 45px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 .current-pagination-item {
@@ -144,17 +153,6 @@
   color: #fff;
 }
 
-.pagination-item {
-  font-size: 16px;
-  width: 50px;
-  height: 50px;
-  border: 0;
-  border-radius: 50%;
-  padding: 10px;
-  color: #fff;
-  cursor: pointer;
-}
-
 .current-page {
   background-color: #dd3444;
   pointer-events: none;
@@ -163,24 +161,4 @@
 .other-pages {
   background-color: #00000095;
   cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .pagination-item {
-    font-size: 12px;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-  }
-  .pagination {
-    gap: 8px;
-  }
-}
-
-.pagination-item:hover {
-  filter: contrast(0.6);
-}
-
-.pagination-arrow {
-  background-color: transparent;
 }

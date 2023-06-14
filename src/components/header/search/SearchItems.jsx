@@ -18,8 +18,7 @@ function SearchItems({ value, setIsTrueDropDownMenu }) {
             error: store.search.error,
         }
     })
-    console.log(data.length < 1)
-    console.log(data)
+
     return (
         <div className='search-items'>
             {loading && <Skeleton variant="rectangular" width="100%" height={300} sx={{ bgcolor: 'grey.900' }} />}
@@ -27,7 +26,7 @@ function SearchItems({ value, setIsTrueDropDownMenu }) {
             {!loading && data ? data.map((movie, index) => {
                 if (index < 4 && movie.poster_path) {
                     return (
-                        <Link to={`/movie-detail-${movie.id}`} key={index} className='search-item'>
+                        <Link onClick={() => setIsTrueDropDownMenu(false)} to={`movie-detail-${movie.id}`} key={index} className='search-item'>
                             <div className='search-img'><img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" /></div>
                             <div className='search-title'>{movie.original_title}</div>
                         </Link>

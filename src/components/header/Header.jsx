@@ -57,7 +57,7 @@ function Header({ setIsTrueDropDownMenu }) {
                                         </Link>
                                     )
                                 })}
-                                <SearchInput setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
+                                <SearchInput />
                             </div>
                             <div onClick={() => setIsTrueDropDownMenu(true)} className='drop-down-menu'>
                                 <HiMenuAlt3 fontSize={'28px'} />

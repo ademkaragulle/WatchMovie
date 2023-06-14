@@ -8,7 +8,7 @@
     width: 100%;
   }
   .search-items {
-    max-height: unset !important;
+    /* max-height: unset !important; */
   }
 }
 
@@ -56,7 +56,7 @@
   padding: 10px 10px;
   display: flex;
   border: 0;
-  cursor: pointer;
+  /* cursor: pointer; */
   color: #fff;
   width: 100%;
 }

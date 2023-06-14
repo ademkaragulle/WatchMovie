@@ -31,7 +31,7 @@
     padding: 10px 10px !important;
   }
   .movies-movie-title {
-    padding: 0 10px;
+    padding: 0 10px !important;
   }
   .movie-badges {
     display: none !important;

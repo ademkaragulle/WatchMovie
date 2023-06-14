@@ -3,11 +3,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import './Search.css'
 import SearchItems from './SearchItems';
 
-function Search({setIsTrueDropDownMenu}) {
+function Search({ setIsTrueDropDownMenu }) {
     const [value, setValue] = useState('')
     const [opensearchItems, setopensearchItems] = useState(false)
-
-
 
     const handleChange = (e) => {
         setValue(e.target.value)

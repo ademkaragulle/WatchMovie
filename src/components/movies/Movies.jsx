@@ -3,7 +3,7 @@ import MovieList from '../movieList/MovieList'
 
 function Movies() {
     return (
-        <div style={{ padding: "30px 0" }}>
+        <div style={{ padding: "30px 0 0 0" }}>
             <MovieList genre="movies" />
         </div>
     )

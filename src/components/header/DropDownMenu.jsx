@@ -13,7 +13,6 @@ function DropDownMenu({ setIsTrueDropDownMenu }) {
             </div>
             <div className='drop-down-menu-items'>
                 <SearchInput setIsTrueDropDownMenu={setIsTrueDropDownMenu}/>
-                {/* <TextField sx={{ width: '100%', background: '#fff', marginBottom: '10px' }} id="outlined-basic" label="Serach" variant="outlined" /> */}
                 <div style={{marginTop:'30px'}} onClick={() => setIsTrueDropDownMenu(false)}><Button sx={{ width: '100%' }} color='secondary'><Link style={{ width: '100%' }} to={'/movies'} className='drop-down-genres'>Movies</Link></Button></div>
                 <div onClick={() => setIsTrueDropDownMenu(false)}><Button sx={{ width: '100%' }} color='secondary'><Link style={{ width: '100%' }} to={'/series'} className='drop-down-genres'>Series</Link></Button></div>
             </div>

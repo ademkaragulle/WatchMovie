@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import './Search.css'
 import SearchItems from './SearchItems';
 
-function Search({ setIsTrueDropDownMenu }) {
+function SearchInput({ setIsTrueDropDownMenu }) {
     const [value, setValue] = useState('')
     const [opensearchItems, setopensearchItems] = useState(false)
 
@@ -28,4 +28,4 @@ function Search({ setIsTrueDropDownMenu }) {
     )
 }
 
-export default Search
+export default SearchInput

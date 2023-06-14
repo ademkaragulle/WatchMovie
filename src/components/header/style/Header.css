@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
   .pages-item {
-    display: none;
+    display: none !important;
   }
   .drop-down-menu {
     display: block !important;
@@ -59,6 +59,7 @@
   margin: auto 0;
 }
 .pages-item {
+  display: flex;
   margin: auto 0;
 }
 

@@ -28,6 +28,28 @@
   scrollbar-width: none;
 }
 
+@media screen and (min-width: 768px) {
+  /* custom scrollbar */
+  .cooming-soon-avatars::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  .cooming-soon-avatars::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .cooming-soon-avatars::-webkit-scrollbar-thumb {
+    background-color: #a3a3a3;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+  }
+
+  .cooming-soon-avatars::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cooming-soon-avatars {
     padding: 8px 0 8px 0 !important;

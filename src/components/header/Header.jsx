@@ -1,23 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Container, AppBar, Toolbar, Typography, Button } from '@mui/material'
 import { HiMenuAlt3 } from 'react-icons/hi'
 import './style/Header.css'
 import { Link } from 'react-router-dom'
+import SearchInput from './search/SearchInput'
 
 const pages = ['Movies', 'Series']
-const movieYears = ['2023', '2022', '2021', '2020', '2019', '2018']
 
 
 function Header({ setIsTrueDropDownMenu }) {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+
 
     return (
         <div id='header' className='header-border'>
@@ -45,7 +38,9 @@ function Header({ setIsTrueDropDownMenu }) {
                             className='pages'
                             component="div"
                         >
+
                             <div className='pages-item'>
+
                                 {pages.map((page) => {
                                     return (
                                         <Link key={page} to={`/${String(page).toLowerCase()}`}>
@@ -63,7 +58,7 @@ function Header({ setIsTrueDropDownMenu }) {
                                         </Link>
                                     )
                                 })}
-                                <input className='input-control' type="search" placeholder='Search Movie' />
+                                <SearchInput />
                             </div>
                             <div onClick={() => setIsTrueDropDownMenu(true)} className='drop-down-menu'>
                                 <HiMenuAlt3 fontSize={'28px'} />

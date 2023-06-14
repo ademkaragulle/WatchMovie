@@ -4,6 +4,7 @@ import { seriesReducer } from './slices/seriesSlice'
 import { upComingReducer } from './slices/upComingSlice'
 import { MovieVideoReducer } from './slices/movieVideoSlice'
 import { manageOverlayReducer } from './slices/manageOverlaySlice'
+import { searchMoviesReducer } from './slices/searchSlice'
 
 export const store = configureStore({
     reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
         series: seriesReducer,
         upComing: upComingReducer,
         fetchVideo: MovieVideoReducer,
-        manageOverlay: manageOverlayReducer
+        manageOverlay: manageOverlayReducer,
+        search: searchMoviesReducer,
     }
 })

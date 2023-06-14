@@ -27,10 +27,8 @@ function SearchItems({ value, setIsTrueDropDownMenu }) {
                 if (index < 4 && movie.poster_path) {
                     return (
                         <Link onClick={() => setIsTrueDropDownMenu(false)} to={`movie-detail-${movie.id}`} key={index} className='search-item'>
-                            <button className='btn-search'>
-                                <div className='search-img'><img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" /></div>
-                                <div className='search-title'>{movie.original_title}</div>
-                            </button>
+                            <div className='search-img'><img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" /></div>
+                            <div className='search-title'>{movie.original_title}</div>
                         </Link>
                     )
                 }

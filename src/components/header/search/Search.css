@@ -8,7 +8,7 @@
     width: 100%;
   }
   .search-items {
-    /* max-height: unset !important; */
+    max-height: unset !important;
   }
 }
 
@@ -56,7 +56,7 @@
   padding: 10px 10px;
   display: flex;
   border: 0;
-  /* cursor: pointer; */
+  cursor: pointer;
   color: #fff;
   width: 100%;
 }
@@ -97,13 +97,4 @@
   transform: translate(-50%, -50%);
   display: unset;
   pointer-events: none;
-}
-
-.btn-search {
-  display: flex;
-  background: transparent;
-  border: 0;
-  align-items: center;
-  color: #fff;
-  cursor: pointer ;
 }

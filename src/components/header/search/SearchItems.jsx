@@ -27,7 +27,7 @@ function SearchItems({ value, setIsTrueDropDownMenu }) {
             {!loading && data ? data.map((movie, index) => {
                 if (index < 4 && movie.poster_path) {
                     return (
-                        <Link onClick={() => setIsTrueDropDownMenu(false)} to={`/movie-detail-${movie.id}`} key={index} className='search-item'>
+                        <Link to={`/movie-detail-${movie.id}`} key={index} className='search-item'>
                             <div className='search-img'><img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" /></div>
                             <div className='search-title'>{movie.original_title}</div>
                         </Link>

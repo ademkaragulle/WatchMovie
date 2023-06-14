@@ -47,40 +47,19 @@ function App() {
               <DropDownMenu setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
             </> : ''
         }
-        {/* <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} /> */}
+        <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
         <Routes>
           <Route path='/' element={
             <>
-              <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
               <CarouselSlide />
               <MoviesComingSoon />
               <MovieList genre="movies" />
             </>
           } />
-          <Route path='/movies' element={
-            <>
-              <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
-              <Movies />
-            </>
-          } />
-          <Route path='/series' element={
-            <>
-              <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
-              <Series />
-            </>
-          } />
-          <Route path={`${locationPathName.substring(1, locationPathName.length)}`} element={
-            <>
-              <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
-              {determineGenre}
-            </>
-          } />
-          <Route path='*' element={
-            <>
-              <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
-              <WrongURL />
-            </>
-          } />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='/series' element={<Series />} />
+          <Route path={`${locationPathName.substring(1, locationPathName.length)}`} element={determineGenre} />
+          <Route path='*' element={<WrongURL />} />
         </Routes>
         <Footer />
       </div>

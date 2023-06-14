@@ -40,7 +40,6 @@ function Header({ setIsTrueDropDownMenu }) {
                         >
 
                             <div className='pages-item'>
-
                                 {pages.map((page) => {
                                     return (
                                         <Link key={page} to={`/${String(page).toLowerCase()}`}>

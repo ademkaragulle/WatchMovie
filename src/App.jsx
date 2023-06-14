@@ -44,11 +44,12 @@ function App() {
           isTrueDropDownMenu ?
             <>
               <div onClick={() => setIsTrueDropDownMenu(false)} className='drop-down-menu-overlay'></div>
-              <DropDownMenu setIsTrueDropDownMenu={setIsTrueDropDownMenu}/>
+              <DropDownMenu setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
             </> : ''
         }
-        <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
-        <Routes>
+
+        {/* <Routes>
+          <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
           <Route path='/' element={
             <>
               <CarouselSlide />
@@ -61,7 +62,68 @@ function App() {
           <Route path={`${locationPathName.substring(1, locationPathName.length)}`} element={determineGenre} />
           <Route path='*' element={<WrongURL />} />
         </Routes>
-        <Footer/>
+        <Footer />
+ */}
+
+
+        <Routes>
+          <Route
+            path='/*'
+            element={
+              <>
+                <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
+                <Routes>
+                  <Route
+                    path='/'
+                    element={
+                      <>
+                        <CarouselSlide />
+                        <MoviesComingSoon />
+                        <MovieList genre='movies' />
+                      </>
+                    }
+                  />
+                  <Route path='/movies' element={<Movies />} />
+                  <Route path='/series' element={<Series />} />
+                  <Route path={`${locationPathName.substring(1, locationPathName.length)}`} element={determineGenre} />
+                  <Route path='*' element={<WrongURL />} />
+                </Routes>
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
+
+
+
+
+
+
+        {/* <Routes>
+          <Route
+            path='/*'
+            element={
+              <>
+                <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
+                <Routes>
+                  <Header setIsTrueDropDownMenu={setIsTrueDropDownMenu} />
+                  <Route path='/' element={
+                    <>
+                      <CarouselSlide />
+                      <MoviesComingSoon />
+                      <MovieList genre="movies" />
+                    </>
+                  } />
+                  <Route path='/movies' element={<Movies />} />
+                  <Route path='/series' element={<Series />} />
+                  <Route path={`${locationPathName.substring(1, locationPathName.length)}`} element={determineGenre} />
+                  <Route path='*' element={<WrongURL />} />
+                </Routes>
+                <Footer />
+              </>
+            }
+          />
+        </Routes> */}
       </div>
     </>
   )

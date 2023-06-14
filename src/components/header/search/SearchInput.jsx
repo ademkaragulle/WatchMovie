@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import './Search.css'
 import SearchItems from './SearchItems';
 
-function Search() {
+function Search({setIsTrueDropDownMenu}) {
     const [value, setValue] = useState('')
     const [opensearchItems, setopensearchItems] = useState(false)
 
@@ -25,7 +25,7 @@ function Search() {
                 <SearchIcon />
             </div>
             <input onChange={handleChange} value={value} className='search-input-control' type="text" placeholder='Search...' />
-            {opensearchItems ? < SearchItems value={value} /> : <div className='search-warning-message'>Please enter at least 3 characters...</div>}
+            {opensearchItems ? < SearchItems setIsTrueDropDownMenu={setIsTrueDropDownMenu} value={value} /> : <div className='search-warning-message'>Please enter at least 3 characters...</div>}
         </div>
     )
 }

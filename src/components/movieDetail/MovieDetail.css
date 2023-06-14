@@ -16,7 +16,7 @@
     width: 40vw !important;
   }
   .movies-detail-container {
-    padding: 20px 10px !important;
+    padding: 20px 10px 0px 10px !important;
   }
 }
 
@@ -29,7 +29,6 @@
 .movies-detail-container {
   padding: 20px;
 }
-
 
 .movie-name {
   background-color: #212529;
@@ -114,7 +113,7 @@
 }
 
 .movie-detail-info {
-  margin: 40px 0;
+  margin: 40px 0 0 0 ;
   color: #fff;
 }
 

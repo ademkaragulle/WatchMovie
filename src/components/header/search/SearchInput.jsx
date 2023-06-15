@@ -22,8 +22,10 @@ function SearchInput({ setIsTrueDropDownMenu }) {
             <div className='search-icon'>
                 <SearchIcon />
             </div>
-            <input onChange={handleChange} value={value} className='search-input-control' type="text" placeholder='Search...' />
-            {opensearchItems ? < SearchItems setIsTrueDropDownMenu={setIsTrueDropDownMenu} value={value} /> : <div className='search-warning-message'>Please enter at least 3 characters...</div>}
+            <div>
+                <input onChange={handleChange} value={value} className='search-input-control' type="text" placeholder='Search...' />
+                {opensearchItems ? < SearchItems setIsTrueDropDownMenu={setIsTrueDropDownMenu} value={value} /> : <div className='search-warning-message'>Please enter at least 3 characters...</div>}
+            </div>
         </div>
     )
 }

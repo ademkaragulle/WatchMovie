@@ -7,9 +7,6 @@
   .search-bar {
     width: 100%;
   }
-  .search-items {
-    max-height: unset !important;
-  }
 }
 
 .search-warning-message {
@@ -26,7 +23,7 @@
 .search-items {
   margin-top: -2px;
   position: absolute;
-  z-index: 2001;
+  z-index: 2002;
   background-color: #424549;
   color: #fff;
   width: 100%;

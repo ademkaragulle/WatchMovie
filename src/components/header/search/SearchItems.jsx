@@ -4,9 +4,7 @@ import { searchMovies } from '../../../store/slices/searchSlice'
 import { Skeleton } from '@mui/material'
 import { Link } from 'react-router-dom'
 
-function SearchItems({ value, setIsTrueDropDownMenu }) {
-
-    console.log('adem')
+function SearchItems({ value, setIsTrueDropDownMenu, setValue, setopensearchItems }) {
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -21,6 +19,14 @@ function SearchItems({ value, setIsTrueDropDownMenu }) {
         }
     })
 
+
+    const handleClick = () => {
+        setIsTrueDropDownMenu(false)
+        setValue('')
+        setopensearchItems(false)
+    }
+
+
     return (
 
         <div className='search-items'>
@@ -29,7 +35,7 @@ function SearchItems({ value, setIsTrueDropDownMenu }) {
             {!loading && data ? data.map((movie, index) => {
                 if (index < 4 && movie.poster_path) {
                     return (
-                        <Link onClick={() => setIsTrueDropDownMenu(false)} to={`movie-detail-${movie.id}`} key={index} className='search-item'>
+                        <Link onClick={handleClick} to={`movie-detail-${movie.id}`} key={index} className='search-item'>
                             <div className='search-img'><img className='img-fluid' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" /></div>
                             <div className='search-title'>{movie.original_title}</div>
                         </Link>

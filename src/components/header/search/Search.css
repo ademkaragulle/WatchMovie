@@ -26,7 +26,7 @@
   z-index: 2002;
   background-color: #424549;
   color: #fff;
-  display: none;
+  /* display: none; */
 }
 
 .search-error-message {

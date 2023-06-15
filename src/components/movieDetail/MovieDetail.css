@@ -104,7 +104,7 @@
 }
 
 .media-player-movie-title {
-  z-index: 999999;
+  z-index: 2000;
   position: absolute;
   color: #fff;
   padding: 10px 20px;

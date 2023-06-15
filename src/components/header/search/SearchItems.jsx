@@ -5,7 +5,6 @@ import { Skeleton } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 function SearchItems({ value, setIsTrueDropDownMenu }) {
-    console.log('adem')
     const dispatch = useDispatch()
 
     useEffect(() => {

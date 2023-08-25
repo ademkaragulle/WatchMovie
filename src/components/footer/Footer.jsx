@@ -7,7 +7,7 @@ function Footer() {
 
     return (
         <div className='footer'>
-            <div> Copyright &copy; {dateYear} <a className='footer-link' href="https://github.com/ademkaragulle" target='_blank'>Adem Karagülle</a>.  |  All Rights Reserved </div>
+            <div> Copyright &copy; {dateYear} <a className='footer-link' href="https://ademkaragulle.netlify.app/" target='_blank'>Adem Karagülle</a>.  |  All Rights Reserved </div>
         </div>
     )
 }
